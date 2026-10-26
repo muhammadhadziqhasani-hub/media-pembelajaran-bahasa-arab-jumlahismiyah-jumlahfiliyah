@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran Bahasa Arab: Jumlah Ismiyah & Fi'liyah</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        teal: {
+                            500: '#14b8a6',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #059669;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-emerald-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center font-bold text-xl border-2 border-emerald-400">
+                    <i class="fa-solid font-arabic text-amber-300">ض</i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg md:text-xl leading-tight">Al-Lughah Al-'Arabiyyah</h1>
+                    <p class="text-xs text-emerald-300">Jumlah Ismiyah & Jumlah Fi'liyah</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex space-x-1 sm:space-x-2 bg-emerald-800/80 p-1 rounded-xl text-xs sm:text-sm">
+                <button onclick="switchTab('materi')" id="tab-materi" class="px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 bg-white text-emerald-900 shadow">
+                    <i class="fa-solid fa-book-open mr-1.5"></i>Materi
+                </button>
+                <button onclick="switchTab('latihan')" id="tab-latihan" class="px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 text-emerald-100 hover:text-white">
+                    <i class="fa-solid fa-layer-group mr-1.5"></i>Pemilah
+                </button>
+                <button onclick="switchTab('kuis')" id="tab-kuis" class="px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 text-emerald-100 hover:text-white">
+                    <i class="fa-solid fa-circle-question mr-1.5"></i>Kuis
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
+
+        <!-- TAB 1: RINGKASAN MATERI -->
+        <section id="section-materi" class="space-y-8 animate-fadeIn">
+            
+            <!-- Hero Banner -->
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white p-6 sm:p-8 shadow-xl">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-arabic pointer-events-none">
+                    الجملة
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <span class="px-3 py-1 bg-emerald-700/60 text-emerald-200 rounded-full text-xs font-semibold tracking-wide uppercase border border-emerald-500/30">Tata Bahasa Arab</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mt-3 mb-2 leading-snug">Memahami Dua Jenis Kalimat (الجملة)</h2>
+                    <p class="text-emerald-100 text-sm sm:text-base leading-relaxed">
+                        Dalam Bahasa Arab, kalimat dibedakan menjadi dua jenis utama berdasarkan jenis kata yang mengawali kalimat tersebut: <strong class="text-amber-300">Jumlah Ismiyah</strong> dan <strong class="text-amber-300">Jumlah Fi'liyah</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Material Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- 1. Jumlah Ismiyah Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-emerald-200">Jenis Pertama</span>
+                            <h3 class="text-xl font-bold">Jumlah Ismiyah</h3>
+                        </div>
+                        <span class="arabic-text text-3xl text-amber-300 font-bold">الجملة الاسمية</span>
+                    </div>
+                    <div class="p-5 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg font-bold text-sm">DEF</div>
+                            <p class="text-sm text-slate-600">
+                                Kalimat yang <strong>dimulai dengan kata benda (isim)</strong>.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg font-bold text-sm">FUNGSI</div>
+                            <p class="text-sm text-slate-600">
+                                Menyampaikan keterangan atau keadaan secara <strong>tetap dan jelas</strong>.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <span class="text-xs font-bold text-slate-500 uppercase">Struktur Utama:</span>
+                            <div class="flex items-center justify-around text-center mt-2 font-semibold text-emerald-800 text-sm">
+                                <div class="bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200">
+                                    Mubtada' (مبتدأ)<br><span class="text-xs font-normal text-slate-500">Subjek</span>
+                                </div>
+                                <span class="text-xl text-emerald-600">+</span>
+                                <div class="bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200">
+                                    Khabar (خبر)<br><span class="text-xs font-normal text-slate-500">Predikat</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contoh Sederhana -->
+                        <div class="border-t border-slate-100 pt-3">
+                            <span class="text-xs font-bold text-slate-500 uppercase">Contoh Sederhana:</span>
+                            <div class="mt-2 bg-emerald-50/60 p-4 rounded-xl flex items-center justify-between border border-emerald-100">
+                                <div>
+                                    <p class="arabic-text text-2xl font-bold text-emerald-900 leading-relaxed">الوَلَدُ مُجْتَهِدٌ</p>
+                                    <p class="text-xs text-slate-600 italic mt-1">Anak laki-laki itu rajin.</p>
+                                </div>
+                                <button onclick="speakArabic('الولد مجتهد')" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition" title="Dengarkan pengucapan">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Jumlah Fi'liyah Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-teal-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="bg-gradient-to-r from-teal-700 to-emerald-800 text-white p-4 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-teal-200">Jenis Kedua</span>
+                            <h3 class="text-xl font-bold">Jumlah Fi'liyah</h3>
+                        </div>
+                        <span class="arabic-text text-3xl text-amber-300 font-bold">الجملة الفعلية</span>
+                    </div>
+                    <div class="p-5 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg font-bold text-sm">DEF</div>
+                            <p class="text-sm text-slate-600">
+                                Kalimat yang <strong>dimulai dengan kata kerja (fi'il)</strong>.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg font-bold text-sm">FUNGSI</div>
+                            <p class="text-sm text-slate-600">
+                                Menyampaikan perbuatan atau kejadian secara <strong>aktif dan dinamis</strong>.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                            <span class="text-xs font-bold text-slate-500 uppercase">Struktur Utama:</span>
+                            <div class="flex items-center justify-around text-center mt-2 font-semibold text-teal-800 text-xs sm:text-sm">
+                                <div class="bg-teal-100 px-2 py-1 rounded border border-teal-200">
+                                    Fi'il (فعل)<br><span class="text-[10px] font-normal text-slate-500">Kata Kerja</span>
+                                </div>
+                                <span>+</span>
+                                <div class="bg-teal-100 px-2 py-1 rounded border border-teal-200">
+                                    Fa'il (فاعل)<br><span class="text-[10px] font-normal text-slate-500">Subjek</span>
+                                </div>
+                                <span>+</span>
+                                <div class="bg-teal-100 px-2 py-1 rounded border border-teal-200">
+                                    Maf'ul (مفعول)<br><span class="text-[10px] font-normal text-slate-500">Objek</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contoh Sederhana -->
+                        <div class="border-t border-slate-100 pt-3">
+                            <span class="text-xs font-bold text-slate-500 uppercase">Contoh Sederhana:</span>
+                            <div class="mt-2 bg-teal-50/60 p-4 rounded-xl flex items-center justify-between border border-teal-100">
+                                <div>
+                                    <p class="arabic-text text-2xl font-bold text-teal-900 leading-relaxed">يَكْتُبُ الوَلَدُ الدَّرْسَ</p>
+                                    <p class="text-xs text-slate-600 italic mt-1">Anak laki-laki menulis pelajaran.</p>
+                                </div>
+                                <button onclick="speakArabic('يكتب الولد الدرس')" class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition" title="Dengarkan pengucapan">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TABEL PERBANDINGAN -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2 bg-amber-100 text-amber-700 rounded-lg">
+                        <i class="fa-solid fa-code-compare text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">Tabel Perbandingan Ringkas</h3>
+                        <p class="text-xs text-slate-500">Perbedaan mendasar antara kedua jenis kalimat</p>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+                                <th class="p-3 font-semibold">Kategori</th>
+                                <th class="p-3 font-semibold text-emerald-700 bg-emerald-50/50">Jumlah ISMIYAH</th>
+                                <th class="p-3 font-semibold text-teal-700 bg-teal-50/50">Jumlah FI'LIYAH</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-600">
+                            <tr>
+                                <td class="p-3 font-semibold bg-slate-50">Dimulai dengan</td>
+                                <td class="p-3 bg-emerald-50/20"><strong>Isim</strong> (Kata Benda)</td>
+                                <td class="p-3 bg-teal-50/20"><strong>Fi'il</strong> (Kata Kerja)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold bg-slate-50">Struktur Utama</td>
+                                <td class="p-3 bg-emerald-50/20">Mubtada' + Khabar</td>
+                                <td class="p-3 bg-teal-50/20">Fi'il + Fa'il (+ Maf'ul bih)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold bg-slate-50">Fungsi Utama</td>
+                                <td class="p-3 bg-emerald-50/20">Menjelaskan atau memberi keterangan tentang subjek secara tetap.</td>
+                                <td class="p-3 bg-teal-50/20">Menyatakan tindakan atau perbuatan yang sedang/telah terjadi.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold bg-slate-50">Contoh Utuh</td>
+                                <td class="p-3 bg-emerald-50/20">
+                                    <span class="arabic-text text-xl font-bold text-emerald-800">الوَلَدُ مُجْتَهِدٌ</span><br>
+                                    <span class="text-xs text-slate-500">Anak laki-laki itu rajin.</span>
+                                </td>
+                                <td class="p-3 bg-teal-50/20">
+                                    <span class="arabic-text text-xl font-bold text-teal-800">يَدْرُسُ التَّلْمِيذُ الدَّرْسَ</span><br>
+                                    <span class="text-xs text-slate-500">Siswa itu mempelajari pelajaran.</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center pt-4">
+                <button onclick="switchTab('latihan')" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-emerald-200 transition-all inline-flex items-center space-x-2">
+                    <span>Mulai Latihan Pemilah Kalimat</span>
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- TAB 2: LATIHAN PEMILAH KALIMAT (INTERACTIVE CLASSIFIER) -->
+        <section id="section-latihan" class="hidden space-y-6 animate-fadeIn">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 text-center">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold">Aktivitas Interaktif</span>
+                <h2 class="text-2xl font-bold text-slate-800 mt-2">Pemilah Kalimat Bahasa Arab</h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto mt-1">
+                    Klik atau ketuk kalimat di bawah ini untuk memasukkannya ke kelompok <strong>Jumlah Ismiyah</strong> atau <strong>Jumlah Fi'liyah</strong> yang sesuai!
+                </p>
+
+                <!-- Status Progress -->
+                <div class="mt-4 flex justify-center items-center space-x-4 text-xs font-semibold">
+                    <span class="text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200" id="classifier-score">Tersisa: 5 Kalimat</span>
+                    <button onclick="resetClassifier()" class="text-slate-500 hover:text-slate-800 underline">
+                        <i class="fa-solid fa-rotate-right mr-1"></i>Reset Latihan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Pool (Kalimat yang harus dipilah) -->
+            <div class="bg-slate-100 p-4 rounded-2xl border border-slate-200">
+                <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 text-center">Pilih Kalimat Di Bawah Ini:</h4>
+                <div id="sentence-pool" class="flex flex-wrap justify-center gap-3 min-h-[80px]">
+                    <!-- Items will be generated dynamically -->
+                </div>
+            </div>
+
+            <!-- Target Classification Boxes -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Ismiyah Drop Container -->
+                <div class="bg-emerald-50/70 border-2 border-dashed border-emerald-300 rounded-2xl p-5 text-center min-h-[220px] flex flex-col">
+                    <div class="mb-3">
+                        <span class="arabic-text text-2xl font-bold text-emerald-800">الجملة الاسمية</span>
+                        <h3 class="font-bold text-emerald-900 text-sm">Target: Jumlah Ismiyah</h3>
+                        <p class="text-xs text-emerald-600">(Diawali Kata Benda / Isim)</p>
+                    </div>
+                    <div id="box-ismiyah" class="flex-1 flex flex-col gap-2 justify-start items-center p-2 rounded-xl bg-white/60">
+                        <!-- Placed items go here -->
+                    </div>
+                </div>
+
+                <!-- Fi'liyah Drop Container -->
+                <div class="bg-teal-50/70 border-2 border-dashed border-teal-300 rounded-2xl p-5 text-center min-h-[220px] flex flex-col">
+                    <div class="mb-3">
+                        <span class="arabic-text text-2xl font-bold text-teal-800">الجملة الفعلية</span>
+                        <h3 class="font-bold text-teal-900 text-sm">Target: Jumlah Fi'liyah</h3>
+                        <p class="text-xs text-teal-600">(Diawali Kata Kerja / Fi'il)</p>
+                    </div>
+                    <div id="box-filiyah" class="flex-1 flex flex-col gap-2 justify-start items-center p-2 rounded-xl bg-white/60">
+                        <!-- Placed items go here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback Message Container -->
+            <div id="classifier-feedback" class="hidden p-4 rounded-xl text-center font-medium text-sm"></div>
+
+            <div class="text-center pt-2">
+                <button onclick="switchTab('kuis')" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition">
+                    Lanjut ke Kuis Evaluasi <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- TAB 3: KUIS INTERAKTIF -->
+        <section id="section-kuis" class="hidden space-y-6 animate-fadeIn">
+            
+            <!-- Quiz Start Card / Active Quiz Area -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+                
+                <!-- Quiz Progress Bar Header -->
+                <div class="flex justify-between items-center pb-4 border-b border-slate-100 mb-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-emerald-600 tracking-wider">Kuis Evaluasi</span>
+                        <h3 class="text-lg font-bold text-slate-800" id="quiz-question-number">Pertanyaan 1 dari 6</h3>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-400">Skor Saat Ini</span>
+                        <div class="text-xl font-extrabold text-emerald-600" id="current-score-display">0</div>
+                    </div>
+                </div>
+
+                <!-- Question Box -->
+                <div id="quiz-container">
+                    <div class="mb-6">
+                        <p class="text-base sm:text-lg font-semibold text-slate-800 leading-relaxed" id="quiz-question-text">
+                            Loading pertanyaan...
+                        </p>
+                    </div>
+
+                    <!-- Options Grid -->
+                    <div class="grid gap-3" id="quiz-options-container">
+                        <!-- Dynamic options loaded via JS -->
+                    </div>
+
+                    <!-- Instant Explanation Panel -->
+                    <div id="quiz-explanation" class="hidden mt-6 p-4 rounded-xl border bg-slate-50 transition-all">
+                        <div class="flex items-center space-x-2 font-bold text-sm mb-1" id="explanation-title">
+                            <!-- Icon & Status -->
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed" id="explanation-text"></p>
+                    </div>
+
+                    <!-- Next Button Area -->
+                    <div class="mt-6 flex justify-end">
+                        <button id="btn-next-question" onclick="nextQuestion()" disabled class="px-6 py-2.5 bg-slate-300 text-slate-500 font-bold rounded-xl transition cursor-not-allowed">
+                            Lanjut Pertanyaan <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Result Screen (Hidden by default) -->
+                <div id="quiz-result-container" class="hidden text-center py-8 space-y-6">
+                    <div class="w-24 h-24 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-5xl shadow-inner">
+                        <i class="fa-solid fa-trophy text-amber-500"></i>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-extrabold text-slate-800">Kuis Selesai!</h3>
+                        <p class="text-slate-500 text-sm mt-1">Berikut adalah hasil evaluasi pemahaman Anda:</p>
+                    </div>
+
+                    <div class="max-w-xs mx-auto bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Skor Akhir Anda</span>
+                        <div class="text-5xl font-black text-emerald-600 my-2" id="final-score">0/100</div>
+                        <p class="text-xs text-slate-600" id="final-feedback-msg">Bagus sekali!</p>
+                    </div>
+
+                    <div class="flex justify-center space-x-3 pt-4">
+                        <button onclick="restartQuiz()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition">
+                            <i class="fa-solid fa-rotate-right mr-1.5"></i>Ulangi Kuis
+                        </button>
+                        <button onclick="switchTab('materi')" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition">
+                            <i class="fa-solid fa-book-open mr-1.5"></i>Pelajari Lagi Materi
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+            <p class="font-semibold text-slate-300">Media Pembelajaran Interaktif Bahasa Arab - Jumlah Ismiyah & Fi'liyah</p>
+            <p>Dikembangkan untuk membantu pembelajaran tata bahasa Arab secara ringkas, intuitif, dan menyenangkan.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. Audio Synthesis Handler ---
+        function speakArabic(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // Stop active speech
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'ar-SA';
+                utterance.rate = 0.8; // slightly slower speed for clarity
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('Fitur suara tidak didukung oleh browser Anda.');
+            }
+        }
+
+        // --- 2. Tab Switching Navigation ---
+        function switchTab(tabName) {
+            // Hide all sections
+            document.getElementById('section-materi').classList.add('hidden');
+            document.getElementById('section-latihan').classList.add('hidden');
+            document.getElementById('section-kuis').classList.add('hidden');
+
+            // Reset tab styles
+            const tabs = ['materi', 'latihan', 'kuis'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                btn.className = "px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 text-emerald-100 hover:text-white";
+            });
+
+            // Active tab styling & display
+            document.getElementById(`section-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.className = "px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 bg-white text-emerald-900 shadow";
+        }
+
+        // --- 3. Classifier Exercise Data & Logic ---
+        const classifierData = [
+            { id: 1, text: "الوَلَدُ مُجْتَهِدٌ", translation: "Anak laki-laki itu rajin.", type: "ismiyah" },
+            { id: 2, text: "يَكْتُبُ الوَلَدُ الدَّرْسَ", translation: "Anak laki-laki menulis pelajaran.", type: "filiyah" },
+            { id: 3, text: "يَدْرُسُ التَّلْمِيذُ الدَّرسَ", translation: "Siswa itu mempelajari pelajaran.", type: "filiyah" },
+            { id: 4, text: "الحَدِيقَةُ جَمِيلَةٌ", translation: "Taman itu indah.", type: "ismiyah" },
+            { id: 5, text: "قَرَأَ مُحَمَّدٌ الْكِتَابَ", translation: "Muhammad membaca buku.", type: "filiyah" },
+            { id: 6, text: "العَرَبِيَّةُ لُغَةٌ جَمِيلَةٌ", translation: "Bahasa Arab adalah bahasa yang indah.", type: "ismiyah" }
+        ];
+
+        let remainingClassifierItems = [];
+
+        function initClassifier() {
+            remainingClassifierItems = [...classifierData];
+            document.getElementById('box-ismiyah').innerHTML = '';
+            document.getElementById('box-filiyah').innerHTML = '';
+            document.getElementById('classifier-feedback').classList.add('hidden');
+            renderSentencePool();
+        }
+
+        function renderSentencePool() {
+            const pool = document.getElementById('sentence-pool');
+            pool.innerHTML = '';
+            
+            document.getElementById('classifier-score').innerText = `Tersisa: ${remainingClassifierItems.length} Kalimat`;
+
+            if (remainingClassifierItems.length === 0) {
+                pool.innerHTML = `<span class="text-xs text-emerald-700 font-bold bg-emerald-100 px-4 py-2 rounded-lg">🎉 Luar biasa! Semua kalimat telah berhasil dikelompokkan dengan benar.</span>`;
+                return;
+            }
+
+            remainingClassifierItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-3 rounded-xl border border-slate-300 shadow-sm flex items-center justify-between gap-3 cursor-pointer hover:border-emerald-500 hover:shadow-md transition";
+                card.innerHTML = `
+                    <div class="text-left">
+                        <span class="arabic-text text-xl font-bold text-slate-800">${item.text}</span>
+                        <p class="text-[11px] text-slate-500 italic">${item.translation}</p>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="classifyItem(${item.id}, 'ismiyah')" class="px-2.5 py-1 text-xs bg-emerald-100 text-emerald-800 font-bold rounded-lg hover:bg-emerald-200">
+                            + Ismiyah
+                        </button>
+                        <button onclick="classifyItem(${item.id}, 'filiyah')" class="px-2.5 py-1 text-xs bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200">
+                            + Fi'liyah
+                        </button>
+                    </div>
+                `;
+                pool.appendChild(card);
+            });
+        }
+
+        function classifyItem(id, selectedType) {
+            const item = classifierData.find(i => i.id === id);
+            const feedbackEl = document.getElementById('classifier-feedback');
+            
+            if (item.type === selectedType) {
+                // Correct placement
+                feedbackEl.className = "p-3 rounded-xl text-center font-medium text-xs bg-emerald-100 text-emerald-800 border border-emerald-300 block";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Tepat sekali! <strong>"${item.text}"</strong> adalah <strong>Jumlah ${selectedType === 'ismiyah' ? 'Ismiyah' : "Fi'liyah"}</strong>.`;
+                
+                // Add to designated container box
+                const targetBox = document.getElementById(`box-${selectedType}`);
+                const badge = document.createElement('div');
+                badge.className = "w-full p-2 bg-white rounded-lg border border-slate-200 shadow-sm flex justify-between items-center text-xs";
+                badge.innerHTML = `<span class="arabic-text text-base font-bold text-slate-800">${item.text}</span> <i class="fa-solid fa-check text-emerald-600"></i>`;
+                targetBox.appendChild(badge);
+
+                // Remove from remaining pool
+                remainingClassifierItems = remainingClassifierItems.filter(i => i.id !== id);
+                renderSentencePool();
+            } else {
+                // Incorrect placement
+                feedbackEl.className = "p-3 rounded-xl text-center font-medium text-xs bg-rose-100 text-rose-800 border border-rose-300 block";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1"></i> Kurang tepat. Kalimat <strong>"${item.text}"</strong> diawali dengan <strong>${item.type === 'ismiyah' ? 'Isim (Kata Benda)' : 'Fi\'il (Kata Kerja)'}</strong>.`;
+            }
+        }
+
+        function resetClassifier() {
+            initClassifier();
+        }
+
+        // --- 4. Quiz Questions Data & Interactive Engine ---
+        const quizData = [
+            {
+                question: "Berdasarkan materi yang dipelajari, apakah definisi yang tepat untuk الجملة الاسمية (Al-Jumlah Al-Ismiyah)?",
+                options: [
+                    "Kalimat yang diawali dengan kata kerja (fi'il).",
+                    "Kalimat yang diawali dengan kata benda (isim).",
+                    "Kalimat yang hanya terdiri dari objek (maf'ul).",
+                    "Kalimat perintah tanpa subjek."
+                ],
+                correct: 1,
+                explanation: "Jumlah Ismiyah adalah kalimat yang diawali dengan kata benda (isim), yang struktur dasarnya terdiri dari Mubtada' dan Khabar."
+            },
+            {
+                question: "Perhatikan contoh kalimat berikut: الوَلَدُ مُجْتَهِدٌ. Termasuk jenis kalimat apakah contoh tersebut dan apa strukturnya?",
+                options: [
+                    "Jumlah Fi'liyah dengan struktur fi'il dan fa'il.",
+                    "Jumlah Ismiyah dengan struktur mubtada' dan khabar.",
+                    "Jumlah Fi'liyah dengan struktur mubtada' dan maf'ul.",
+                    "Jumlah Ismiyah dengan struktur fi'il dan khabar."
+                ],
+                correct: 1,
+                explanation: "Kalimat 'الوَلَدُ مُجْتَهِدٌ' diawali oleh isim 'الوَلَدُ' (Mubtada') diikuti keterangan 'مُجْتَهِدٌ' (Khabar), sehingga merupakan Jumlah Ismiyah."
+            },
+            {
+                question: "Manakah susunan struktur dasar yang benar untuk membentuk الجملة الفعلية (Al-Jumlah Al-Fi'liyah)?",
+                options: [
+                    "Mubtada' diikuti Khabar.",
+                    "Fi'il diikuti Fa'il, lalu Maf'ul.",
+                    "Isim diikuti Fi'il, lalu Harf.",
+                    "Maf'ul diikuti Fi'il, lalu Fa'il."
+                ],
+                correct: 1,
+                explanation: "Jumlah Fi'liyah diawali oleh Kata Kerja (Fi'il), kemudian diikuti Pelaku (Fa'il) dan Objek (Maf'ul bih)."
+            },
+            {
+                question: "Perhatikan contoh kalimat berikut: يَكْتُبُ الوَلَدُ الدَّرْسَ. Apa fungsi utama dari bentuk kalimat tersebut?",
+                options: [
+                    "Menyampaikan keterangan keadaan tetap dan jelas.",
+                    "Menyatakan tindakan atau perbuatan yang aktif/dinamis.",
+                    "Menanyakan kabar seseorang.",
+                    "Memberikan perintah kepada pendengar."
+                ],
+                correct: 1,
+                explanation: "Jumlah Fi'liyah berfungsi untuk menyampaikan perbuatan atau kejadian secara aktif dan dinamis (seperti tindakan menulis)."
+            },
+            {
+                question: "Apa perbedaan paling mendasar antara Jumlah Ismiyah dan Jumlah Fi'liyah?",
+                options: [
+                    "Jumlah kata dalam satu kalimat.",
+                    "Jenis kata pertama yang mengawali kalimat (isim atau fi'il).",
+                    "Penggunaan tanda baca titik dan koma.",
+                    "Panjang pendeknya kalimat."
+                ],
+                correct: 1,
+                explanation: "Perbedaan mendasar terletak pada kata pertama: jika diawali Isim dinamakan Ismiyah, jika diawali Fi'il dinamakan Fi'liyah."
+            },
+            {
+                question: "Manakah di antara kalimat berikut yang termasuk kedalam contoh Jumlah Fi'liyah?",
+                options: [
+                    "العَرَبِيَّةُ لُغَةٌ جَمِيلَةٌ",
+                    "الحَدِيقَةُ جَمِيلَةٌ",
+                    "يَدْرُسُ التَّلْمِيذُ الدَّرْسَ",
+                    "الوَلَدُ مُجْتَهِدٌ"
+                ],
+                correct: 2,
+                explanation: "'يَدْرُسُ التَّلْمِيذُ الدَّرْسَ' termasuk Jumlah Fi'liyah karena diawali oleh kata kerja 'يَدْرُسُ' (mempelajari)."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        function loadQuestion() {
+            answered = false;
+            const currentQuiz = quizData[currentQuestionIndex];
+            
+            // Update question header & text
+            document.getElementById('quiz-question-number').innerText = `Pertanyaan ${currentQuestionIndex + 1} dari ${quizData.length}`;
+            document.getElementById('quiz-question-text').innerText = currentQuiz.question;
+            
+            // Hide explanation & disable next button
+            document.getElementById('quiz-explanation').classList.add('hidden');
+            const nextBtn = document.getElementById('btn-next-question');
+            nextBtn.disabled = true;
+            nextBtn.className = "px-6 py-2.5 bg-slate-300 text-slate-500 font-bold rounded-xl transition cursor-not-allowed";
+
+            // Render options
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+
+            currentQuiz.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 font-medium text-sm transition flex items-center justify-between group";
+                btn.onclick = () => selectOption(idx);
+                btn.innerHTML = `
+                    <span class="flex items-center space-x-3">
+                        <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-600 font-bold text-xs flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition">${String.fromCharCode(65 + idx)}</span>
+                        <span class="text-slate-700">${opt}</span>
+                    </span>
+                    <i class="fa-regular fa-circle text-slate-300 group-hover:text-emerald-500"></i>
+                `;
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(selectedIdx) {
+            if (answered) return;
+            answered = true;
+
+            const currentQuiz = quizData[currentQuestionIndex];
+            const optionsContainer = document.getElementById('quiz-options-container');
+            const optionButtons = optionsContainer.children;
+            const isCorrect = selectedIdx === currentQuiz.correct;
+
+            if (isCorrect) {
+                score += Math.round(100 / quizData.length);
+                document.getElementById('current-score-display').innerText = score;
+            }
+
+            // Update UI for buttons
+            Array.from(optionButtons).forEach((btn, idx) => {
+                btn.disabled = true;
+                btn.className = "w-full text-left p-4 rounded-xl border text-sm font-medium transition flex items-center justify-between ";
+                
+                if (idx === currentQuiz.correct) {
+                    btn.classList.add('border-emerald-500', 'bg-emerald-100/80', 'text-emerald-900', 'font-bold');
+                    btn.innerHTML += `<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>`;
+                } else if (idx === selectedIdx && !isCorrect) {
+                    btn.classList.add('border-rose-500', 'bg-rose-100/80', 'text-rose-900');
+                    btn.innerHTML += `<i class="fa-solid fa-circle-xmark text-rose-600 text-lg"></i>`;
+                } else {
+                    btn.classList.add('border-slate-200', 'opacity-50');
+                }
+            });
+
+            // Show explanation
+            const expContainer = document.getElementById('quiz-explanation');
+            const expTitle = document.getElementById('explanation-title');
+            const expText = document.getElementById('explanation-text');
+
+            expContainer.classList.remove('hidden');
+            if (isCorrect) {
+                expContainer.className = "mt-6 p-4 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-900";
+                expTitle.className = "flex items-center space-x-2 font-bold text-sm mb-1 text-emerald-700";
+                expTitle.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Jawaban Anda Benar!</span>`;
+            } else {
+                expContainer.className = "mt-6 p-4 rounded-xl border border-rose-200 bg-rose-50 text-rose-900";
+                expTitle.className = "flex items-center space-x-2 font-bold text-sm mb-1 text-rose-700";
+                expTitle.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> <span>Jawaban Kurang Tepat</span>`;
+            }
+            expText.innerText = currentQuiz.explanation;
+
+            // Enable Next Button
+            const nextBtn = document.getElementById('btn-next-question');
+            nextBtn.disabled = false;
+            nextBtn.className = "px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition cursor-pointer";
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            const resultContainer = document.getElementById('quiz-result-container');
+            resultContainer.classList.remove('hidden');
+
+            document.getElementById('final-score').innerText = `${score}/100`;
+
+            const msgEl = document.getElementById('final-feedback-msg');
+            if (score >= 80) {
+                msgEl.innerText = "Mumtaz! Anda telah menguasai Jumlah Ismiyah dan Fi'liyah dengan sangat baik.";
+            } else if (score >= 60) {
+                msgEl.innerText = "Baguns! Pemahaman Anda sudah cukup memadai, teruslah berlatih.";
+            } else {
+                msgEl.innerText = "Jangan berkecil hati. Pelajari kembali materi ringkasan dan coba lagi kuis ini!";
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('current-score-display').innerText = '0';
+            document.getElementById('quiz-result-container').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        // Initialize Application
+        window.onload = function() {
+            initClassifier();
+            loadQuestion();
+        };
+    </script>
+</body>
+</html>
